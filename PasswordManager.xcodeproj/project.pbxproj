@@ -82,15 +82,11 @@
 			children = (
 				2D20149422E5D3BE00409442 /* AppDelegate.swift */,
 				2D20149622E5D3BE00409442 /* ViewController.swift */,
+				2DEF7519241558D70073B247 /* Individual VC */,
 				2D20149822E5D3BE00409442 /* Main.storyboard */,
 				189432A322F97F1A009B876F /* ShiftUIViewController.swift */,
-				2D2014CC22E82AF800409442 /* ListTableViewController.swift */,
-				2D2014CA22E82AC200409442 /* TableViewCell.swift */,
-				2D2014CE22E84C6100409442 /* PasswordViewController.swift */,
-				2D2014EC22E8706100409442 /* AccountViewController.swift */,
-				2D20150F22E96A8000409442 /* CardViewController.swift */,
-				2D20155B22E9C37E00409442 /* AddressViewController.swift */,
-				2D20155D22E9CEC700409442 /* SecureNotesViewController.swift */,
+				2D20156522EEB39E00409442 /* ListCollectionViewController.swift */,
+				2D20156722EEB48200409442 /* CollectionViewCell.swift */,
 				2DAD6A7122F1B25300503119 /* Others */,
 				2D20149E22E5D3C500409442 /* Assets.xcassets */,
 				2D2014A022E5D3C500409442 /* LaunchScreen.storyboard */,
@@ -103,12 +99,24 @@
 			isa = PBXGroup;
 			children = (
 				189432A522F983F7009B876F /* Notes.swift */,
-				2D20156522EEB39E00409442 /* ListCollectionViewController.swift */,
+				2D2014CA22E82AC200409442 /* TableViewCell.swift */,
+				2D2014CC22E82AF800409442 /* ListTableViewController.swift */,
 				2D20156322EAFB5000409442 /* ScrollViewController.swift */,
 				2D20156122EADB7500409442 /* ViewControllerForScroll.swift */,
-				2D20156722EEB48200409442 /* CollectionViewCell.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		2DEF7519241558D70073B247 /* Individual VC */ = {
+			isa = PBXGroup;
+			children = (
+				2D2014EC22E8706100409442 /* AccountViewController.swift */,
+				2D2014CE22E84C6100409442 /* PasswordViewController.swift */,
+				2D20155B22E9C37E00409442 /* AddressViewController.swift */,
+				2D20150F22E96A8000409442 /* CardViewController.swift */,
+				2D20155D22E9CEC700409442 /* SecureNotesViewController.swift */,
+			);
+			path = "Individual VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

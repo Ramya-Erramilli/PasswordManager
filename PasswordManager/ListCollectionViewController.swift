@@ -14,6 +14,7 @@ class ListCollectionViewController: UIViewController,UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Number of items in a row and screen
         var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsetsMake(0, 2, 0, 2)
         layout.minimumInteritemSpacing = 2
