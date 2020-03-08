@@ -18,10 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vik-n1-BIK">
-                                <rect key="frame" x="275" y="551" width="67" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vik-n1-BIK">
+                                <rect key="frame" x="272" y="548" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.2649962306022644" green="0.59603124856948853" blue="0.82061237096786499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="N6o-jF-GJG"/>
+                                    <constraint firstAttribute="width" constant="70" id="Vho-eY-TDC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="50"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="1" green="0.98952647362018165" blue="0.99182482110017633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,13 +35,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91925734281539917" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ota-ta-C5G" firstAttribute="trailing" secondItem="vik-n1-BIK" secondAttribute="trailing" constant="33" id="GnA-wa-2yr"/>
+                            <constraint firstItem="Ota-ta-C5G" firstAttribute="bottom" secondItem="vik-n1-BIK" secondAttribute="bottom" constant="49" id="mke-id-ImI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ota-ta-C5G"/>
                     </view>
                     <navigationItem key="navigationItem" id="SIC-yI-ter"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hI-D3-2G0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519.20000000000005" y="-191.1544227886057"/>
+            <point key="canvasLocation" x="742" y="-1093"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X6x-2B-zTE">
@@ -49,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="E1v-Fu-CgN" kind="relationship" relationship="rootViewController" id="MZ9-Nv-owS"/>
+                        <segue destination="aI8-QI-Atx" kind="relationship" relationship="rootViewController" id="UNT-Ra-r2D"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXZ-Rk-hPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1252,7 +1259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6X-Mv-Ukv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369" y="2188"/>
+            <point key="canvasLocation" x="900" y="-191"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="XlG-0d-sVo">
@@ -1701,7 +1708,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4Q-oM-xV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="-191.1544227886057"/>
+            <point key="canvasLocation" x="1641" y="-1374"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="62y-Vz-Qse">
@@ -1713,13 +1720,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aI8-QI-Atx" kind="relationship" relationship="rootViewController" id="fqC-dt-1VE"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="du3-6P-kgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="2187"/>
+            <point key="canvasLocation" x="-241" y="1790"/>
         </scene>
     </scenes>
     <resources>

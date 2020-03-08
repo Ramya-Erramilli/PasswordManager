@@ -17,7 +17,9 @@ class ListCollectionViewController: UIViewController,UICollectionViewDataSource,
         var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsetsMake(0, 2, 0, 2)
         layout.minimumInteritemSpacing = 2
-        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width)-2, height: (self.collectionView.frame.size.height)/4)
+        let itemSize = UIScreen.main.bounds.width/2 - 3
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+//        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width)-2, height: (self.collectionView.frame.size.height)/4)
         
 //        let itemSize = UIScreen.main.bounds.width/3 - 3
 //        let layout = UICollectionViewFlowLayout()
@@ -51,10 +53,36 @@ class ListCollectionViewController: UIViewController,UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var alert = UIAlertController(title: "Hey!", message: "You have selected \(avaialbleDomains[indexPath.item])", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Go ➡️", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-//        self.show(alert, sender: self)
+        
+        var newView:UIViewController?
+        var flag = true
+        
+        switch indexPath.row {
+        case 0:
+            newView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "passwordVC") as! PasswordViewController
+        case 1:
+            newView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "accountVC") as! AccountViewController
+        case 2:
+            newView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addressVC") as! AddressViewController
+        case 3:
+            newView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardVC") as! CardViewController
+        case 4:
+            newView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "secureVC") as! SecureNotesViewController
+        default:
+            flag = false
+            var alert = UIAlertController(title: "Wrong selection", message: "Choose an appropriate row", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert,animated: true,completion: nil)
+        }
+        
+        if flag{
+            self.show(newView!, sender: self)
+        }
+        
+//        var alert = UIAlertController(title: "Hey!", message: "You have selected \(avaialbleDomains[indexPath.item])", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Go ➡️", style: .default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+////        self.show(alert, sender: self)
     }
 
 }
